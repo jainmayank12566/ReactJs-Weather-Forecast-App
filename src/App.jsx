@@ -15,6 +15,7 @@ function App(){
             <Input />
             <Buttons onClick={weather.fetchData} value="Search"/>
             <Card />
+            <Buttons onClick={weather.fetchCurrentUserLocationData} value="Refresh"/>
         </div>
     )
 }

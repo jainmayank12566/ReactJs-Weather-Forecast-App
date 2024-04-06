@@ -12,10 +12,13 @@ export const WeatherProvider=(props)=>{
 
     function fetchCurrentUserLocationData(){
         navigator.geolocation.getCurrentPosition((position)=>{
+            setsearchcity("");
             getWeatherDataForLocation(position.coords.latitude,position.coords.longitude)
             .then((data)=>{
                 setdata(data);
             })
+        },(error)=>{
+            console.log("Error",error);
         })
     }
     return(
